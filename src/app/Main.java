@@ -3,8 +3,8 @@ package app;
 import java.util.Scanner;
 
 public class Main {
-
   private static Scanner input;
+
 
   public static void main(String[] args) {
 
@@ -29,8 +29,6 @@ public class Main {
     int available5 = input.nextInt();
     System.out.print("2,5kg: ");
     int available2half = input.nextInt();
-
-
 
     targetWeight -= barbellWeight;
 
