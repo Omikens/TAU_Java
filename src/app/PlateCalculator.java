@@ -14,10 +14,17 @@ public class PlateCalculator {
     public int available5;
     public int available2half;
 
+    public static void main(String[] args) {
+        System.out.print("What weight would you like to use: ");
+        input = new Scanner(System.in);
+        new PlateCalculator().PlateCalculator(input.nextInt());
+    }
+
     public int PlateCalculator(double targetWeight) {
         input = new Scanner(System.in);
 
-        System.out.print("What weight would you like to use: ");
+        if(targetWeight < 0) { throw new IllegalArgumentException(); }
+
 
         System.out.print("What is the weight of barbell: ");
         double barbellWeight = input.nextInt();
@@ -88,12 +95,12 @@ public class PlateCalculator {
 
         System.out.print("Put this on each side of bar: ");
         System.out.print("45: " + use45);
-        System.out.print("35: " + use35);
-        System.out.print("25: " + use25);
-        System.out.print("20: " + use20);
-        System.out.print("10: " + use10);
-        System.out.print("5: " + use5);
-        System.out.print("2.5: " + use2half);
-        return use45;
+        System.out.print(" 35: " + use35);
+        System.out.print(" 25: " + use25);
+        System.out.print(" 20: " + use20);
+        System.out.print(" 10: " + use10);
+        System.out.print(" 5: " + use5);
+        System.out.print(" 2.5: " + use2half);
+        return use45; // returning number of 45kg plates only for testing purposes
     }
 }
