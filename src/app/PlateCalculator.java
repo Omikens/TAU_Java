@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class PlateCalculator {
 
     private static Scanner input;
-    public double targetWeight;
 
     public int available45;
     public int available35;
@@ -21,21 +20,29 @@ public class PlateCalculator {
         System.out.print("What weight would you like to use: ");
 
         System.out.print("What is the weight of barbell: ");
+        //double barbellWeight = 20;
         double barbellWeight = input.nextInt();
         System.out.print("What plates do you have? Enter a number: ");
         System.out.print("45kg: ");
+       // available45 = 2;
         available45 = input.nextInt();
         System.out.print("35kg: ");
+        //available35 = 2;
         available35 = input.nextInt();
         System.out.print("25kg: ");
+        //available25 = 2;
         available25 = input.nextInt();
         System.out.print("20kg: ");
+        //available20 = 2;
         available20 = input.nextInt();
         System.out.print("10kg: ");
+        //available10 = 2;
         available10 = input.nextInt();
         System.out.print("5kg: ");
+        //available5 = 2;
         available5 = input.nextInt();
         System.out.print("2,5kg: ");
+        //available2half = 2;
         available2half = input.nextInt();
 
         targetWeight -= barbellWeight;
