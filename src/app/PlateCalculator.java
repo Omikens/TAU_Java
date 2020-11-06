@@ -57,31 +57,31 @@ public class PlateCalculator {
 
         while (targetWeight > 0) {
 
-            if ((targetWeight - 90 >= 0) && (available45 > 0)) {
+            if ((targetWeight - 90 >= 0) && (available45 > 1)) {
                 targetWeight -= 90;
                 use45++;
                 available45--;
-            } else if ((targetWeight - 70 >= 0) && (available35 > 0)) {
+            } else if ((targetWeight - 70 >= 0) && (available35 > 1)) {
                 targetWeight -= 70;
                 use35++;
                 available35--;
-            } else if ((targetWeight - 50 >= 0) && (available25 > 0)) {
+            } else if ((targetWeight - 50 >= 0) && (available25 > 1)) {
                 targetWeight -= 50;
                 use25++;
                 available25--;
-            } else if ((targetWeight - 40 >= 0) && (available20 > 0)) {
+            } else if ((targetWeight - 40 >= 0) && (available20 > 1)) {
                 targetWeight -= 40;
                 use20++;
                 available20--;
-            } else if ((targetWeight - 20 >= 0) && (available10 > 0)) {
+            } else if ((targetWeight - 20 >= 0) && (available10 > 1)) {
                 targetWeight -= 20;
                 use10++;
                 available10--;
-            } else if ((targetWeight - 10 >= 0) && (available5 > 0)) {
+            } else if ((targetWeight - 10 >= 0) && (available5 > 1)) {
                 targetWeight -= 10;
                 use5++;
                 available5--;
-            } else if ((targetWeight - 5 >= 0) && (available2half > 0)) {
+            } else if ((targetWeight - 5 >= 0) && (available2half > 1)) {
                 targetWeight -= 5;
                 use2half++;
                 available2half--;
