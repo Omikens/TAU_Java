@@ -11,7 +11,7 @@ class WrongEmail:
     ch.setFormatter(formatter)
     logger.addHandler(ch)
 
-    driver = webdriver.Chrome(executable_path='C:\Program Files (x86)\Google\Chrome\chromedriver.exe')
+    driver = webdriver.Firefox(executable_path='C:\Program Files\Mozilla Firefox\geckodriver.exe')
 
     driver.get('https://www.morele.net/')
     logger.info("Opening https://www.morele.net/...")
