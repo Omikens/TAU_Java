@@ -1,4 +1,4 @@
-package app;
+package pl.pjwstk.lab3;
 
 import java.util.Scanner;
 
@@ -14,13 +14,13 @@ public class PlateCalculator {
     public int available5;
     public int available2half;
 
-    public static void main(String[] args) {
+   /* public static void main(String[] args) {
         System.out.print("What weight would you like to use: ");
         input = new Scanner(System.in);
-        new PlateCalculator().PlateCalculator(input.nextInt());
+        new PlateCalculator().calculate(input.nextInt());
     }
-
-    public int PlateCalculator(double targetWeight) {
+*/
+    public int calculate(double targetWeight) {
         input = new Scanner(System.in);
 
         if(targetWeight < 0) { throw new IllegalArgumentException(); }
