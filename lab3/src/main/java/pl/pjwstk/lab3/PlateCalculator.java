@@ -13,13 +13,16 @@ public class PlateCalculator {
     public int available10;
     public int available5;
     public int available2half;
+    double barbellWeight;
+    static double targetWeight;
 
-   /* public static void main(String[] args) {
+    public static void main(String[] args) {
         System.out.print("What weight would you like to use: ");
         input = new Scanner(System.in);
-        new PlateCalculator().calculate(input.nextInt());
+        targetWeight = input.nextDouble();
+        new PlateCalculator().calculate(targetWeight);
     }
-*/
+
     public int calculate(double targetWeight) {
         input = new Scanner(System.in);
 
@@ -27,8 +30,9 @@ public class PlateCalculator {
 
 
         System.out.print("What is the weight of barbell: ");
-        double barbellWeight = input.nextInt();
-        System.out.print("What plates do you have? Enter a number: ");
+        barbellWeight = input.nextInt();
+        System.out.println("You will need total weigh of: " + needWeight() + " to reach desired barbell weight");
+        System.out.println("What plates do you have? Enter a number: ");
         System.out.print("45kg: ");
         available45 = input.nextInt();
         System.out.print("35kg: ");
@@ -53,7 +57,6 @@ public class PlateCalculator {
         int use10 = 0;
         int use5 = 0;
         int use2half = 0;
-
 
         while (targetWeight > 0) {
 
@@ -101,6 +104,69 @@ public class PlateCalculator {
         System.out.print(" 10: " + use10);
         System.out.print(" 5: " + use5);
         System.out.print(" 2.5: " + use2half);
+
+        System.out.println("\nSome useless data:");
+        need45();
+        need35();
+        need25();
+        need20();
+        need10();
+        need5();
+        need2half();
         return use45; // returning number of 45kg plates only for testing purposes
+    }
+
+    public double needWeight(){
+        return targetWeight - barbellWeight;
+    }
+    public int need45(){
+        if ((needWeight() % 45) == 0){
+            System.out.println("You can build this weight entirely using only: "+(int)needWeight()/45+" of 45kg plates");
+            return (int) (needWeight()/45);
+        }
+        else {return 0;}
+    }
+    public int need35(){
+        if (needWeight() % 35 == 0){
+            System.out.println("You can build this weight entirely using only: "+(int)needWeight()/35+" of 35kg plates");
+            return (int) (needWeight()/35);
+        }
+        else {return 0;}
+    }
+    public int need25(){
+        if (needWeight() % 25 == 0){
+            System.out.println("You can build this weight entirely using only: "+(int)needWeight()/25+" of 25kg plates");
+            return (int) (needWeight()/25);
+        }
+        else {return 0;}
+    }
+    public int need20(){
+        if (needWeight() % 20 == 0){
+            System.out.println("You can build this weight entirely using only: "+(int)needWeight()/20+" of 20kg plates");
+            return (int) (needWeight()/20);
+        }
+        else {return 0;}
+    }
+    public int need10(){
+        if (needWeight() % 10 == 0){
+            System.out.println("You can build this weight entirely using only: "+(int)needWeight()/10+" of 10kg plates");
+            return (int) (needWeight()/10);
+        }
+        else {return 0;}
+    }
+    public int need5(){
+        if (needWeight() % 5 == 0){
+            System.out.println("You can build this weight entirely using only: "+(int)needWeight()/5+" of 5kg plates");
+            return (int) (needWeight()/5);
+        }
+        else {return 0;}
+    }
+    public double need2half(){
+        if (needWeight() % 2.5 == 0){
+            double count = needWeight()/2.5;
+            System.out.println("You can build this weight entirely using only: "+(int)count+" of 2,5kg plates");
+            return (needWeight()/2.5);
+        }
+        else {return 0;}
     }
 }
