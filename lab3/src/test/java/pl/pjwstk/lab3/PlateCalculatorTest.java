@@ -6,7 +6,6 @@ import org.junit.Test;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
-import java.io.InputStream;
 import java.io.PrintStream;
 
 import static org.junit.Assert.*;
@@ -35,7 +34,6 @@ public class PlateCalculatorTest {
 
     @Test
     public void plateCalculator() {
-        InputStream sysInBackup = System.in; // backup System.in to restore it later
         ByteArrayInputStream in = new ByteArrayInputStream(("20" + System.lineSeparator()
                 + "2" + System.lineSeparator()
                 + "2" + System.lineSeparator()
@@ -53,7 +51,6 @@ public class PlateCalculatorTest {
 
     @Test
     public void plateCalculator2() {
-        InputStream sysInBackup = System.in; // backup System.in to restore it later
         ByteArrayInputStream in = new ByteArrayInputStream(("20" + System.lineSeparator()
                 + "2" + System.lineSeparator()
                 + "0" + System.lineSeparator()
@@ -74,7 +71,6 @@ public class PlateCalculatorTest {
 
     @Test
     public void plateCalculator3() {
-        InputStream sysInBackup = System.in; // backup System.in to restore it later
         ByteArrayInputStream in = new ByteArrayInputStream(("10" + System.lineSeparator()
                 + "2" + System.lineSeparator()
                 + "2" + System.lineSeparator()
@@ -91,7 +87,6 @@ public class PlateCalculatorTest {
 
     @Test
     public void testNeedWeight() {
-        InputStream sysInBackup = System.in; // backup System.in to restore it later
         ByteArrayInputStream in = new ByteArrayInputStream(("20" + System.lineSeparator()
                 + "2" + System.lineSeparator()
                 + "2" + System.lineSeparator()
@@ -111,7 +106,6 @@ public class PlateCalculatorTest {
 
     @Test
     public void testNeed45() {
-        InputStream sysInBackup = System.in; // backup System.in to restore it later
         ByteArrayInputStream in = new ByteArrayInputStream(("20" + System.lineSeparator()
                 + "2" + System.lineSeparator()
                 + "2" + System.lineSeparator()
@@ -131,7 +125,6 @@ public class PlateCalculatorTest {
 
     @Test
     public void testNeed35() {
-        InputStream sysInBackup = System.in; // backup System.in to restore it later
         ByteArrayInputStream in = new ByteArrayInputStream(("20" + System.lineSeparator()
                 + "2" + System.lineSeparator()
                 + "2" + System.lineSeparator()
@@ -151,7 +144,6 @@ public class PlateCalculatorTest {
 
     @Test
     public void testNeed25() {
-        InputStream sysInBackup = System.in; // backup System.in to restore it later
         ByteArrayInputStream in = new ByteArrayInputStream(("10" + System.lineSeparator()
                 + "2" + System.lineSeparator()
                 + "2" + System.lineSeparator()
@@ -171,7 +163,6 @@ public class PlateCalculatorTest {
 
     @Test
     public void testNeed20() {
-        InputStream sysInBackup = System.in; // backup System.in to restore it later
         ByteArrayInputStream in = new ByteArrayInputStream(("20" + System.lineSeparator()
                 + "2" + System.lineSeparator()
                 + "2" + System.lineSeparator()
@@ -191,7 +182,6 @@ public class PlateCalculatorTest {
 
     @Test
     public void testNeed10() {
-        InputStream sysInBackup = System.in; // backup System.in to restore it later
         ByteArrayInputStream in = new ByteArrayInputStream(("20" + System.lineSeparator()
                 + "2" + System.lineSeparator()
                 + "2" + System.lineSeparator()
@@ -211,7 +201,6 @@ public class PlateCalculatorTest {
 
     @Test
     public void testNeed5() {
-        InputStream sysInBackup = System.in; // backup System.in to restore it later
         ByteArrayInputStream in = new ByteArrayInputStream(("20" + System.lineSeparator()
                 + "2" + System.lineSeparator()
                 + "2" + System.lineSeparator()
@@ -231,7 +220,6 @@ public class PlateCalculatorTest {
 
     @Test
     public void testNeed2half() {
-        InputStream sysInBackup = System.in; // backup System.in to restore it later
         ByteArrayInputStream in = new ByteArrayInputStream(("20" + System.lineSeparator()
                 + "2" + System.lineSeparator()
                 + "2" + System.lineSeparator()
