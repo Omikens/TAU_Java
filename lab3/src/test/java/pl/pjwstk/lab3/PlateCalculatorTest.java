@@ -88,4 +88,164 @@ public class PlateCalculatorTest {
         plateCalculator.calculate(120);
         assertNotNull(outContent.toString());
     }
+
+    @Test
+    public void testNeedWeight() {
+        InputStream sysInBackup = System.in; // backup System.in to restore it later
+        ByteArrayInputStream in = new ByteArrayInputStream(("20" + System.lineSeparator()
+                + "2" + System.lineSeparator()
+                + "2" + System.lineSeparator()
+                + "2" + System.lineSeparator()  // simulating user input
+                + "2" + System.lineSeparator()  // barbell weight and plates available
+                + "2" + System.lineSeparator()
+                + "2" + System.lineSeparator()
+                + "2" + System.lineSeparator()
+        ).getBytes());
+        System.setIn(in);
+
+        PlateCalculator.targetWeight = 120;
+        plateCalculator.calculate(120);
+        double result = plateCalculator.needWeight();
+        assertEquals(100, result, 2);
+    }
+
+    @Test
+    public void testNeed45() {
+        InputStream sysInBackup = System.in; // backup System.in to restore it later
+        ByteArrayInputStream in = new ByteArrayInputStream(("20" + System.lineSeparator()
+                + "2" + System.lineSeparator()
+                + "2" + System.lineSeparator()
+                + "2" + System.lineSeparator()  // simulating user input
+                + "2" + System.lineSeparator()  // barbell weight and plates available
+                + "2" + System.lineSeparator()
+                + "2" + System.lineSeparator()
+                + "2" + System.lineSeparator()
+        ).getBytes());
+        System.setIn(in);
+
+        PlateCalculator.targetWeight = 110;
+        plateCalculator.calculate(110);
+        int result = plateCalculator.need45();
+        assertEquals(2, result);
+    }
+
+    @Test
+    public void testNeed35() {
+        InputStream sysInBackup = System.in; // backup System.in to restore it later
+        ByteArrayInputStream in = new ByteArrayInputStream(("20" + System.lineSeparator()
+                + "2" + System.lineSeparator()
+                + "2" + System.lineSeparator()
+                + "2" + System.lineSeparator()  // simulating user input
+                + "2" + System.lineSeparator()  // barbell weight and plates available
+                + "2" + System.lineSeparator()
+                + "2" + System.lineSeparator()
+                + "2" + System.lineSeparator()
+        ).getBytes());
+        System.setIn(in);
+
+        PlateCalculator.targetWeight = 90;
+        plateCalculator.calculate(90);
+        int result = plateCalculator.need35();
+        assertEquals(2, result);
+    }
+
+    @Test
+    public void testNeed25() {
+        InputStream sysInBackup = System.in; // backup System.in to restore it later
+        ByteArrayInputStream in = new ByteArrayInputStream(("10" + System.lineSeparator()
+                + "2" + System.lineSeparator()
+                + "2" + System.lineSeparator()
+                + "2" + System.lineSeparator()  // simulating user input
+                + "2" + System.lineSeparator()  // barbell weight and plates available
+                + "2" + System.lineSeparator()
+                + "2" + System.lineSeparator()
+                + "2" + System.lineSeparator()
+        ).getBytes());
+        System.setIn(in);
+
+        PlateCalculator.targetWeight = 110;
+        plateCalculator.calculate(110);
+        int result = plateCalculator.need25();
+        assertEquals(4, result);
+    }
+
+    @Test
+    public void testNeed20() {
+        InputStream sysInBackup = System.in; // backup System.in to restore it later
+        ByteArrayInputStream in = new ByteArrayInputStream(("20" + System.lineSeparator()
+                + "2" + System.lineSeparator()
+                + "2" + System.lineSeparator()
+                + "2" + System.lineSeparator()  // simulating user input
+                + "2" + System.lineSeparator()  // barbell weight and plates available
+                + "2" + System.lineSeparator()
+                + "2" + System.lineSeparator()
+                + "2" + System.lineSeparator()
+        ).getBytes());
+        System.setIn(in);
+
+        PlateCalculator.targetWeight = 220;
+        plateCalculator.calculate(220);
+        int result = plateCalculator.need20();
+        assertEquals(10, result);
+    }
+
+    @Test
+    public void testNeed10() {
+        InputStream sysInBackup = System.in; // backup System.in to restore it later
+        ByteArrayInputStream in = new ByteArrayInputStream(("20" + System.lineSeparator()
+                + "2" + System.lineSeparator()
+                + "2" + System.lineSeparator()
+                + "2" + System.lineSeparator()  // simulating user input
+                + "2" + System.lineSeparator()  // barbell weight and plates available
+                + "2" + System.lineSeparator()
+                + "2" + System.lineSeparator()
+                + "2" + System.lineSeparator()
+        ).getBytes());
+        System.setIn(in);
+
+        PlateCalculator.targetWeight = 100;
+        plateCalculator.calculate(100);
+        int result = plateCalculator.need10();
+        assertEquals(8, result);
+    }
+
+    @Test
+    public void testNeed5() {
+        InputStream sysInBackup = System.in; // backup System.in to restore it later
+        ByteArrayInputStream in = new ByteArrayInputStream(("20" + System.lineSeparator()
+                + "2" + System.lineSeparator()
+                + "2" + System.lineSeparator()
+                + "2" + System.lineSeparator()  // simulating user input
+                + "2" + System.lineSeparator()  // barbell weight and plates available
+                + "2" + System.lineSeparator()
+                + "2" + System.lineSeparator()
+                + "2" + System.lineSeparator()
+        ).getBytes());
+        System.setIn(in);
+
+        PlateCalculator.targetWeight = 150;
+        plateCalculator.calculate(150);
+        int result = plateCalculator.need5();
+        assertEquals(26, result);
+    }
+
+    @Test
+    public void testNeed2half() {
+        InputStream sysInBackup = System.in; // backup System.in to restore it later
+        ByteArrayInputStream in = new ByteArrayInputStream(("20" + System.lineSeparator()
+                + "2" + System.lineSeparator()
+                + "2" + System.lineSeparator()
+                + "2" + System.lineSeparator()  // simulating user input
+                + "2" + System.lineSeparator()  // barbell weight and plates available
+                + "2" + System.lineSeparator()
+                + "2" + System.lineSeparator()
+                + "2" + System.lineSeparator()
+        ).getBytes());
+        System.setIn(in);
+
+        PlateCalculator.targetWeight = 90;
+        plateCalculator.calculate(90);
+        double result = plateCalculator.need2half();
+        assertNotEquals(0, result);
+    }
 }
