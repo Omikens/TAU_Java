@@ -11,7 +11,7 @@ public class PlateCalculatorApplication {
         return plateService.calculate(input1);
     }
 
-    public double neededweight(){
-        return plateService.needWeight();
+    public int availabeheavy(int input1, int input2){
+        return plateService.availableHeavy(input1, input2);
     }
 }

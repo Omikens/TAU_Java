@@ -45,14 +45,14 @@ public class PlateCalculatorTest {
 
         Assert.assertEquals(plateCalculatorApplication.platecalculator(80), 0);
     }
-/*
+
     @Test
     public void testPlateCalculatorMock3() {
-        when(plateService.needWeight()).thenReturn((double) 2);
+        when(plateService.availableHeavy(10, 10)).thenReturn(20);
 
-        Assert.assertNotNull(outContent.toString());
+        Assert.assertEquals(plateCalculatorApplication.availabeheavy(10, 10), 20);
     }
-*/
+
 
     @Before
     public void setUp() {

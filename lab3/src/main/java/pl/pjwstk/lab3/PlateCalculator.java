@@ -116,6 +116,9 @@ public class PlateCalculator {
         return use45; // returning number of 45kg plates only for testing purposes
     }
 
+    public int availableHeavy(int available45, int available35){
+        return available45 + available35;
+    }
     public double needWeight(){ return targetWeight - barbellWeight; }
     public int need45(){
         if ((needWeight() % 45) == 0){
