@@ -116,9 +116,7 @@ public class PlateCalculator {
         return use45; // returning number of 45kg plates only for testing purposes
     }
 
-    public double needWeight(){
-        return targetWeight - barbellWeight;
-    }
+    public double needWeight(){ return targetWeight - barbellWeight; }
     public int need45(){
         if ((needWeight() % 45) == 0){
             System.out.println("You can build this weight entirely using only: "+(int)needWeight()/45+" of 45kg plates");

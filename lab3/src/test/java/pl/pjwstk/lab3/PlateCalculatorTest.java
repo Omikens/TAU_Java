@@ -1,15 +1,22 @@
 package pl.pjwstk.lab3;
 
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.MockitoJUnitRunner;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
 import static org.junit.Assert.*;
+import static org.mockito.Mockito.when;
 
+@RunWith(MockitoJUnitRunner.class)
 
 public class PlateCalculatorTest {
     private PlateCalculator plateCalculator;
@@ -17,6 +24,34 @@ public class PlateCalculatorTest {
     private final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
     private final PrintStream originalOut = System.out;
     private final PrintStream originalErr = System.err;
+
+    @InjectMocks
+    PlateCalculatorApplication plateCalculatorApplication = new PlateCalculatorApplication();
+
+    @Mock
+    PlateCalculator plateService;
+
+    @Test
+    public void testPlateCalculatorMock1() {
+        when(plateService.calculate(120)).thenReturn(2);
+
+        Assert.assertEquals(plateCalculatorApplication.platecalculator(120), 2);
+    }
+/*
+    @Test
+    public void testPlateCalculatorMock2() {
+        given(plateService.calculate(120)).willReturn(2);
+
+        Assert.assertEquals(plateCalculatorApplication.platecalculator(120), 2);
+    }
+
+    @Test
+    public void testPlateCalculatorMock3() {
+        when(plateService.needWeight()).thenReturn((double) 2);
+
+        Assert.assertNotNull(outContent.toString());
+    }
+*/
 
     @Before
     public void setUp() {
