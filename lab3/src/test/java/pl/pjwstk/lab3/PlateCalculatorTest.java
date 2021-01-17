@@ -14,6 +14,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
 import static org.junit.Assert.*;
+import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -37,14 +38,14 @@ public class PlateCalculatorTest {
 
         Assert.assertEquals(plateCalculatorApplication.platecalculator(120), 2);
     }
-/*
+
     @Test
     public void testPlateCalculatorMock2() {
-        given(plateService.calculate(120)).willReturn(2);
+        given(plateService.calculate(80)).willReturn(0);
 
-        Assert.assertEquals(plateCalculatorApplication.platecalculator(120), 2);
+        Assert.assertEquals(plateCalculatorApplication.platecalculator(80), 0);
     }
-
+/*
     @Test
     public void testPlateCalculatorMock3() {
         when(plateService.needWeight()).thenReturn((double) 2);
