@@ -5,12 +5,13 @@
 ## Trial
 Trial is Twisted's unit testing system, an extension of Python's `unittest` https://docs.python.org/3/library/unittest.html module for asynchronous and event-driven code.
 
-Trial is two things. The first is a command-line test runner, which can be run on plain Python unit tests. It's very simple to use. For example, the fastest way to get going with Trial is to write a plain Python unit test like this:
+Trial is two things. The first is a command-line test runner, which can be run on plain Python unit tests.
 
 ## Instalation
 Trial is a core component of Twisted. As such, there is no need to download it separately. If you have downloaded the Twisted tarball, you'll find the Trial source code in the twisted/trial directory.
 
 ## Test sample
+It's very simple to use. For example, the fastest way to get going with Trial is to write a plain Python unit test like this:
 ```python
 import unittest
 class DemoTest(unittest.TestCase):
