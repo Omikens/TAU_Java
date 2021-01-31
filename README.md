@@ -3,7 +3,7 @@
 # LAB5
 
 ## Trial
-Trial is Twisted's unit testing system, an extension of ?Python's `unittest` https://docs.python.org/3/library/unittest.html module for asynchronous and event-driven code.
+Trial is Twisted's unit testing system, an extension of Python's `unittest` https://docs.python.org/3/library/unittest.html module for asynchronous and event-driven code.
 
 Trial is two things. The first is a command-line test runner, which can be run on plain Python unit tests. It's very simple to use. For example, the fastest way to get going with Trial is to write a plain Python unit test like this:
 
@@ -62,7 +62,7 @@ Trial will also catch certain types of global state manipulations, like leaving 
 For a more complete list of the test runner's features, trial --help will provide options. A selection of features which can be enabled with these options include:
 
 - Colored output: red for failure, green for success (even on Windows!)
-- support for the ?subunit test-result protocol
+- support for the subunit test-result protocol
 - command-line control over the garbage collector (optionally collect between each test, or disable it)
 - test-order randomization, based on a random seed so the same order can be repeated
 - run your tests in a loop until they fail
@@ -77,6 +77,6 @@ The main unique feature of this testing class is the ability to return a Deferre
 
 
 ## Documentation
-You can find ?a documentation here: https://twistedmatrix.com/documents/current/core/howto/trial.html
+You can find a documentation here: https://twistedmatrix.com/documents/current/core/howto/trial.html
 
 If you run trial --help from the command line, you'll see a list of possible invocation arguments (the trial command can be found in bin in the tarball).
