@@ -48,7 +48,7 @@ FAILED (failures=1, successes=1)
 
 Trial's test runner can do automated unit-test discovery across files, modules, or even arbitrarily nested packages. For example, you can run Twisted's own tests with it by just typing trial twisted in a shell.
 
-Trial's test runner will also automatically catch errors that are logged but not ?explicitly handled. For example, this test will fail:
+Trial's test runner will also automatically catch errors that are logged but not explicitly handled. For example, this test will fail:
 ``` python
 from twisted.python import log
 import unittest
